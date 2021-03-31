@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row text-center">
+        <h1 class="display-2 text-center">Welcome to Projects Website</h1>
+        <a href="statistics/">
+            <button type="button" class="btn btn-info">
+                Statistical
+                information
+            </button>
+        </a>
+    </div>
+    <div class="row ">
+        <div class="col-4">
+            <div class="row display-6">Departments</div>
+            <div class="row">
+
+                {% for record in d_data %}
+                <div>
+                    <h5>
+                        <a href="departments/{{record.id}}">
+                            {{record.id}}
+                            {{record.name}}
+                        </a>
+                    </h5>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="col-4 display-6">
+            <div class="row display-6">Projects</div>
+            <div class="row">
+
+                {% for record in p_data %}
+                <div>
+                    <h5>
+                        <a href="projects/{{record.id}}">
+                            {{record.id}}
+                            {{record.name}}
+                        </a>
+                    </h5>
+                </div> {% endfor %} </div>
+        </div>
+        <div class="col-4 display-6">
+            <div class="row display-6">Employees</div>
+            <div class="row">
+                {% for record in e_data %}
+                <div>
+                    <h5>
+                        <a href="employees/{{record.pid}}">
+                            {{record.firstname}}
+                            {{record.lastname}}
+
+                        </a>
+                    </h5>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+
+    </div>
+</div>
+{% endblock %}

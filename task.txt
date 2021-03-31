@@ -1,0 +1,32 @@
+Dear Tomasz,
+
+ 
+
+We would like to give you the task today which we would like you to prepare for the second interview next week:
+
+ 
+
+Programming Task Python
+
+Create a webserver in python (feel free to use any python frameworks you want). 
+
+The webserver should fulfil the following functions:
+
+Implement data model with CRUD capability (see ER diagram below and CSV files)
+Import of the given csv data (the import can be CLI based)
+Create and serve webpages for each entity in the diagram:
+Overview: a table or list of all instances
+Detail: a detailed view of one instance (optionally edit the instance)
+Create a webpage showing at least the following statistical information:
+Average employee age of department
+Employees per department
+Number of Projects per department
+Create REST API for each entity with at least the following capabilities:
+HTTP GET: List of all entity instances
+HTTP GET: specific entity instance by its primary key
+Create an entity instance with HTTP POST
+ 
+
+Please upload your code into a git repository and share it to us. Please upload your final code at least two hours before your interview.
+
+ER-Diagram:

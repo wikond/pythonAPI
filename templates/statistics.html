@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <h1 class="display-2 text-center">Statistical Information: </h1>
+    </div>
+    <div class="row">
+        <div class="row">
+            <div>
+                <h3 class="display-6">
+                    Average employee age of department
+                    {% for record in render_data %}
+                    <div>
+                        <h5>
+                            {{record.name}}
+                            {{record.av_age}}
+                        </h5>
+                    </div>
+                    {% endfor %}
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <h3 class="display-6">
+                    Employees per department
+                    {% for record in render_data %}
+                    <div>
+                        <h5>
+                            {{record.name}}
+                            {{record.nr_emp}}
+                        </h5>
+                    </div>
+                    {% endfor %}
+                </h3>
+            </div>
+        </div>
+        <div class="row">
+            <div>
+                <h3 class="display-6">
+                    Number of Projects per department
+                    {% for record in render_data %}
+                    <div>
+                        <h5>
+                            {{record.name}}
+                            {{record.nr_projects}}
+                        </h5>
+                    </div>
+                    {% endfor %}
+                </h3>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

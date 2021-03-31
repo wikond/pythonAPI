@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>{{id}}</h1>
+<div class="container">
+    <div class="row">
+        <h1 class="display-2 text-center">Project Details: </h1>
+    </div>
+    <div class="row">
+        <div class="row">
+
+            <div>
+                <h3 class="display-4">
+                    {{render_data.id}}
+                    {{render_data.name}}
+                    {{render_data.client}}
+                    {{render_data.department}}
+                </h3>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

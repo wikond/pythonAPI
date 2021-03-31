@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>{{id}}</h1>
+<div class="container">
+    <div class="row">
+        <h1 class="display-2 text-center">Department Details: </h1>
+    </div>
+    <div class="row">
+        <div class="row">
+
+            <div>
+                <h3 class="display-4">
+                    {{render_data.id}}
+                    {{render_data.name}}
+                    {% for record in e_data %}
+                    {% if render_data.name == record.department %}
+                    <div>
+                        <h5>
+                            {{record.firstname}}
+                            {{record.lastname}}
+                            {{record.email}}
+                            {{record.department}}
+                            {{record.age}}
+                        </h5>
+                    </div>
+
+                    {% endif %}
+                    {% endfor %}
+                </h3>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}

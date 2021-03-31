@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>{{id}}</h1>
+<div class="container">
+    <div class="row">
+        <h1 class="display-2 text-center">Employee Details: </h1>
+    </div>
+    <div class="row">
+        <div class="row">
+
+            <div>
+                <h3 class="display-6">
+                    {{render_data.firstname}}
+                    {{render_data.lastname}}
+                    {{render_data.email}}
+                    {{render_data.department}}
+                    {{render_data.age}}
+                </h3>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
